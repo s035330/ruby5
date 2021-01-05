@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby5</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Judam</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <%= link_to "Pagrindinis", home_index_path %>
+            </li>
+            <li>
+              <%= link_to "Judantis paveikslelis", gifs_index_path %>
+            </li>
+            <li>
+              <%= link_to "Susisiekti", home_contact_path %>
+            </li>
+            <li>
+              <%= link_to "Apie", home_about_path %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <%= yield %>
+  </body>
+</html>
